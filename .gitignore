@@ -2,6 +2,8 @@
 *.log
 *.zip
 .DS_Store
+/*.js
+
 
 # folders
 node_modules/*
