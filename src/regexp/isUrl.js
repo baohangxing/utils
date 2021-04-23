@@ -1,6 +1,6 @@
 /**
  *
- * @desc   判断是否为URL地址
+ * @desc   Determine whether str is a Url
  * @param  {String} str
  * @return {Boolean}
  */

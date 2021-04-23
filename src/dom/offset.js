@@ -1,6 +1,6 @@
 /**
  *
- * @desc  获取一个元素的距离文档(document)的位置，类似jQ中的offset()
+ * @desc  Get the position of an element from the document (document), similar to offset() in jQ
  * @param {HTMLElement} ele
  * @returns { {left: number, top: number} }
  */

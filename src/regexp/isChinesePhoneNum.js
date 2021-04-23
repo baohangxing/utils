@@ -1,11 +1,11 @@
 /**
  *
- * @desc   判断是否为手机号
+ * @desc   determain whether str is a Chinese num
  * @param  {String|Number} str
  * @return {Boolean}
  */
-function isPhoneNum(str) {
+function isChinesePhoneNum(str) {
     return /^(\+?0?86\-?)?1[3456789]\d{9}$/.test(str);
 }
 
-module.exports = isPhoneNum;
+module.exports = isChinesePhoneNum;

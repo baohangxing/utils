@@ -1,7 +1,8 @@
 /**
- * @desc 获取滚动条距顶部的距离
+ * @desc Get the distance of the scroll bar from the top
  */
 function getScrollTop() {
+    if (!document) return 0;
     return (
         (document.documentElement && document.documentElement.scrollTop) ||
         document.body.scrollTop

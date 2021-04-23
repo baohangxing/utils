@@ -1,14 +1,13 @@
+var hasClass = require('./hasClass');
+
 /**
  *
- * @desc 为元素移除class
+ * @desc remove class from HTMLElement
  * @param {HTMLElement} ele
  * @param {String} cls
  */
-
-var hasClass = require('./hasClass');
-
 function removeClass(ele, cls) {
-    if (hasClass(ele, cls)) {
+    if (ele && hasClass(ele, cls)) {
         var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
         ele.className = ele.className.replace(reg, ' ');
     }

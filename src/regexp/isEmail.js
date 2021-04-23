@@ -1,11 +1,13 @@
 /**
  *
- * @desc   判断是否为邮箱地址
+ * @desc   Determine whether str is a email
  * @param  {String}  str
  * @return {Boolean}
  */
 function isEmail(str) {
-    return /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/.test(str);
+    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+        str
+    );
 }
 
 module.exports = isEmail;

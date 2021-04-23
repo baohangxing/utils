@@ -1,9 +1,10 @@
 /**
  *
- * @desc 获取浏览器类型和版本
+ * @desc get Explorer type and version
  * @return {String}
  */
-function getExplore() {
+function getExplorerType() {
+    if (!navigator || !navigator.userAgent) return 'Unkonwn';
     var sys = {},
         ua = navigator.userAgent.toLowerCase(),
         s;
@@ -32,4 +33,4 @@ function getExplore() {
     return 'Unkonwn';
 }
 
-module.exports = getExplore;
+module.exports = getExplorerType;

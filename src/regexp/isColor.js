@@ -1,6 +1,6 @@
 /**
  *
- * @desc 判断是否为16进制颜色，rgb 或 rgba
+ * @desc Determine whether str is hexadecimal rgb or rgba
  * @param  {String}  str
  * @return {Boolean}
  */

@@ -1,5 +1,5 @@
 /**
- * @desc 深拷贝，支持常见类型
+ * @desc deep Clone，suport common data types
  * @param {Any} values
  * @return {Any}
  */

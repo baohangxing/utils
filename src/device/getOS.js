@@ -1,6 +1,6 @@
 /**
  *
- * @desc 获取操作系统类型
+ * @desc get operation system type
  * @return {String}
  */
 function getOS() {
@@ -8,11 +8,6 @@ function getOS() {
         ('navigator' in window &&
             'userAgent' in navigator &&
             navigator.userAgent.toLowerCase()) ||
-        '';
-    var vendor =
-        ('navigator' in window &&
-            'vendor' in navigator &&
-            navigator.vendor.toLowerCase()) ||
         '';
     var appVersion =
         ('navigator' in window &&

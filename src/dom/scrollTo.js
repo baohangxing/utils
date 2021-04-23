@@ -10,9 +10,10 @@ var requestAnimFrame = (function () {
         }
     );
 })();
+
 /**
  *
- * @desc  在${duration}时间内，滚动条平滑滚动到${to}指定位置
+ * @desc  scrolls to the specified position smoothly within a certain period of time
  * @param {Number} to
  * @param {Number} duration
  */

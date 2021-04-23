@@ -1,14 +1,13 @@
+var hasClass = require('./hasClass');
+
 /**
  *
- * @desc   为元素添加class
+ * @desc   add class to HTMLElement
  * @param  {HTMLElement} ele
  * @param  {String} cls
  */
-
-var hasClass = require('./hasClass');
-
 function addClass(ele, cls) {
-    if (!hasClass(ele, cls)) {
+    if (ele && !hasClass(ele, cls)) {
         ele.className += ' ' + cls;
     }
 }
