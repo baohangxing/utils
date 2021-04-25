@@ -1,6 +1,6 @@
 /**
  *
- * @desc   determain whether str is a Chinese num
+ * @desc   determain whether the str is a Chinese mobile telephone number
  * @param  {String|Number} str
  * @return {Boolean}
  */

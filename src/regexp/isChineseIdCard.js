@@ -1,6 +1,6 @@
 /**
  *
- * @desc  determain whether str is Chinese id cart
+ * @desc  determain whether the str is Chinese id cart
  * @param  {String|Number} str
  * @return {Boolean}
  */

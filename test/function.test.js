@@ -1,25 +1,85 @@
 describe('Function API:', function () {
     describe('#debounce()', function () {
         const debounce = hx_utils.debounce;
-        it(`hx_utils.debounce(200,function(){return true}) should return true`, function (done) {
-            let num = 0;
+
+        it(`debounce expect(obj.add).toHaveBeenCalledTimes(0);`, function (done) {
+            let obj = {
+                num: 1,
+                add: function () {
+                    this.num++;
+                },
+            };
             let interval = null;
-            let debounced = debounce(500, function () {
-                num++;
-                expect(num).toEqual(1);
+            spyOn(obj, 'add');
+            let debounced = debounce(100, function () {
+                obj.add();
+            });
+            interval = setInterval(function () {
+                debounced();
+            }, 20);
+            setTimeout(function () {
+                expect(obj.add).toHaveBeenCalledTimes(0);
+                clearInterval(interval);
                 done();
-                return true;
+            }, 400);
+        });
+        it(`debounce expect(obj.add).toHaveBeenCalledTimes(1);`, function (done) {
+            let obj = {
+                num: 1,
+                add: function () {
+                    this.num++;
+                },
+            };
+            let interval = null;
+            spyOn(obj, 'add');
+            let debounced = debounce(100, function () {
+                obj.add();
             });
             interval = setInterval(function () {
                 debounced();
             }, 20);
             setTimeout(function () {
                 clearInterval(interval);
-            }, 800);
+            }, 400);
+            setTimeout(function () {
+                expect(obj.add).toHaveBeenCalledTimes(1);
+                done();
+            }, 600);
+        });
+        it(`debounce expect(obj.add).toHaveBeenCalledTimes(2);`, function (done) {
+            let obj = {
+                num: 1,
+                add: function () {
+                    this.num++;
+                },
+            };
+            let interval = null;
+            spyOn(obj, 'add');
+            let debounced = debounce(100, function () {
+                obj.add();
+            });
+            interval = setInterval(function () {
+                debounced();
+            }, 20);
+            setTimeout(function () {
+                clearInterval(interval);
+                setTimeout(function () {
+                    interval = setInterval(function () {
+                        debounced();
+                    }, 20);
+                }, 100);
+                setTimeout(function () {
+                    clearInterval(interval);
+                }, 200);
+            }, 400);
+            setTimeout(function () {
+                expect(obj.add).toHaveBeenCalledTimes(2);
+                done();
+            }, 700);
         });
     });
 
-    describe('#throttle()', function () {
+    describe('throttle()', function () {
         const throttle = hx_utils.throttle;
         it(`hx_utils.throttle(100, function(){return true}) should return true`, function (done) {
             let num = 0;
