@@ -23,7 +23,6 @@ function getExplorerType() {
         : (s = ua.match(/version\/([\d\.]+).*safari/))
         ? (sys.safari = s[1])
         : 0;
-    // 根据关系进行判断
     if (sys.ie) return 'IE: ' + sys.ie;
     if (sys.edge) return 'EDGE: ' + sys.edge;
     if (sys.firefox) return 'Firefox: ' + sys.firefox;

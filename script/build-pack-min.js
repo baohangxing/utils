@@ -4,14 +4,14 @@ const rm = require('rimraf');
 const chalk = require('chalk');
 const webpack = require('webpack');
 
-const config = require('./webpack.nomin.conf');
+const config = require('./webpack.min.conf');
 const pkg = require('../package.json');
 const rootPath = path.resolve(__dirname, '../');
 
 // 构建全量压缩包
 let building = ora('building...');
 building.start();
-rm(path.resolve(rootPath, 'min', `${pkg.name}.js`), err => {
+rm(path.resolve(rootPath, 'min', `${pkg.name}.min.js`), err => {
     if (err) throw err;
     webpack(config, function (err, stats) {
         if (err) throw err;
@@ -25,6 +25,6 @@ rm(path.resolve(rootPath, 'min', `${pkg.name}.js`), err => {
                 chunkModules: false,
             }) + '\n\n'
         );
-        console.log(chalk.cyan(`  ${pkg.name}.js Build complete.\n`));
+        console.log(chalk.cyan(`  ${pkg.name}.min.js Build complete.\n`));
     });
 });

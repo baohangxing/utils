@@ -3,7 +3,7 @@
 *.zip
 .DS_Store
 /*.js
-
+/dist
 
 # folders
 node_modules/*

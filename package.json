@@ -5,9 +5,10 @@
     "description": "utils for web development",
     "main": "min/hx_utils.min.js",
     "scripts": {
-        "build": "node script/build.js",
+        "build": "node script/build.js && npx typescript",
         "build-copy": "node script/build-copy.js",
         "build-pack": "node script/build-pack",
+        "build-pack-min": "node script/build-pack-min",
         "test": "npm run build && karma start script/karma.conf.js"
     },
     "repository": {
