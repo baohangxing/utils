@@ -17,6 +17,7 @@
     ]
   },
   "scripts": {
+    "commit": "cz",
     "prepare": "husky install",
     "build": "rollup --config rollup.config.ts",
     "test": "npm run build && karma start script/karma.conf.js"
@@ -42,6 +43,10 @@
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@typescript-eslint/eslint-plugin": "^5.32.0",
     "@typescript-eslint/parser": "^5.32.0",
+    "commitizen": "^4.2.5",
+    "conventional-changelog": "^3.1.25",
+    "conventional-changelog-cli": "^2.2.2",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.21.0",
     "eslint-config-alloy": "^4.6.2",
     "husky": "^8.0.1",
@@ -60,5 +65,10 @@
   "bugs": {
     "url": "https://github.com/baohangxing/utils/issues"
   },
-  "homepage": "https://github.com/baohangxing/utils#readme"
+  "homepage": "https://github.com/baohangxing/utils#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
