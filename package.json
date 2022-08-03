@@ -1,9 +1,10 @@
 {
   "name": "@bhx/utils",
-  "version": "0.0.6",
-  "types": "index.d.ts",
+  "version": "0.0.2",
   "description": "utils for web development",
-  "main": "min/utils.min.js",
+  "type": "module",
+  "exports": "./es/index.js",
+  "typings": "./es/index.d.ts",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -20,7 +21,8 @@
     "commit": "cz",
     "prepare": "husky install",
     "build": "rollup --config rollup.config.ts",
-    "test": "npm run build && karma start script/karma.conf.js"
+    "test": "npm run build && karma start script/karma.conf.js",
+    "changelog": "conventional-changelog -i CHANGELOG.md -s"
   },
   "repository": {
     "type": "git",
