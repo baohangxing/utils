@@ -1,6 +1,6 @@
-# hx_utils
+# @bhx/utils
 
-[![npm](https://img.shields.io/npm/v/hx_utils.svg)](https://www.npmjs.com/package/hx_utils)
-[![LICENSE MIT](https://img.shields.io/npm/l/hx_utils.svg)](https://www.npmjs.com/package/hx_utils)
+[![npm](https://img.shields.io/npm/v/@bhx/utils.svg)](https://www.npmjs.com/package/@bhx/utils)
+[![LICENSE MIT](https://img.shields.io/npm/l/@bhx/utils.svg)](https://www.npmjs.com/package/@bhx/utils)
 
-一个工具类的合集
+utils for web development
