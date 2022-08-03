@@ -4,6 +4,8 @@
 .DS_Store
 /*.js
 /dist
+/es
+/lib
 
 # folders
 node_modules/*
