@@ -1,6 +1,6 @@
 {
   "name": "@bhx/utils",
-  "version": "0.0.2",
+  "version": "0.0.7",
   "description": "utils for web development",
   "type": "module",
   "exports": "./es/index.js",
